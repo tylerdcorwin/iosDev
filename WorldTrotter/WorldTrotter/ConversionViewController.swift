@@ -48,7 +48,23 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("ConversionViewController loaded its view")
         updateCelsiusLabel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        var color: UIColor
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH"
+        let currentTime = dateFormatter.string(from: date)
+        if Int(currentTime)! > 6 && Int(currentTime)! < 18 {
+            color = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
+        } else {
+            color = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 1)
+        }
+        view.backgroundColor = color
     }
     
     let numberFormatter: NumberFormatter = {
