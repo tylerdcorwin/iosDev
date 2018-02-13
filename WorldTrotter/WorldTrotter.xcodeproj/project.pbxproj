@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53054DD12033AC88001660E5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53054DD02033AC88001660E5 /* Localizable.strings */; };
 		5321617E202143480016D155 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5321617D202143480016D155 /* AppDelegate.swift */; };
 		53216183202143480016D155 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53216181202143480016D155 /* Main.storyboard */; };
 		53216185202143480016D155 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53216184202143480016D155 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		53054DD02033AC88001660E5 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		5321617A202143480016D155 /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5321617D202143480016D155 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53216182202143480016D155 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				5321617D202143480016D155 /* AppDelegate.swift */,
 				53216181202143480016D155 /* Main.storyboard */,
 				53EA562F202A7E9E00DA2AD2 /* MapViewController.swift */,
+				53054DD02033AC88001660E5 /* Localizable.strings */,
 				532161AB20214CB90016D155 /* ConversionViewController.swift */,
 				53216184202143480016D155 /* Assets.xcassets */,
 				53216186202143480016D155 /* LaunchScreen.storyboard */,
@@ -251,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53216188202143480016D155 /* LaunchScreen.storyboard in Resources */,
+				53054DD12033AC88001660E5 /* Localizable.strings in Resources */,
 				53216185202143480016D155 /* Assets.xcassets in Resources */,
 				53216183202143480016D155 /* Main.storyboard in Resources */,
 			);
