@@ -44,15 +44,21 @@ class ItemsViewController: UITableViewController {
         //let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
         
         //get a new or recycled cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for:indexPath) as! ItemCell
         
         //set the text on the cell with the description of the item
         //that is at the nth index of items, where n = row this cell
         //will appear in on the tableview
         let item = itemStore.allItems[indexPath.row]
         
-        cell.textLabel?.text = item.name
-        cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+//        cell.textLabel?.text = item.name
+//        cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+        
+        //Configure the cell with the Item
+        cell.nameLabel.text = item.name
+        cell.serialNumberLabel.text = item.name
+        cell.valueLabel.text = "$\(item.valueInDollars)"
         
         return cell
     }
@@ -65,6 +71,11 @@ class ItemsViewController: UITableViewController {
         let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
+        
+//        tableView.rowHeight = 65
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 65
+        
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
@@ -97,5 +108,22 @@ class ItemsViewController: UITableViewController {
         //update the model
         itemStore.moveItem(from: sourceIndexPath.row, to: destinationIndexPath.row)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //if the triggered segue is the show item segue
+        switch segue.identifier {
+            case "showItem"?:
+            //Figure out what row was just tapped
+            if let row = tableView.indexPathForSelectedRow?.row {
+                //get the item associated witht his row and pass it along
+                let item = itemStore.allItems[row]
+                let detailViewController = segue.destination as! DetailViewController
+                detailViewController.item = item
+            }
+        default:
+            preconditionFailure("Unexpected segue identifier.")
+        }
+    }
+    
     
 }

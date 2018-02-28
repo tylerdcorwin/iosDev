@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5335D0E420461C5200531187 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5335D0E320461C5200531187 /* ItemCell.swift */; };
+		5335D0E620462EF500531187 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5335D0E520462EF500531187 /* DetailViewController.swift */; };
 		537EE3E32033B2A3006EC967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537EE3E22033B2A3006EC967 /* AppDelegate.swift */; };
 		537EE3E82033B2A3006EC967 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537EE3E62033B2A3006EC967 /* Main.storyboard */; };
 		537EE3EA2033B2A3006EC967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537EE3E92033B2A3006EC967 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		5335D0E320461C5200531187 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		5335D0E520462EF500531187 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		537EE3DF2033B2A3006EC967 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		537EE3E22033B2A3006EC967 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		537EE3E72033B2A3006EC967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,7 +85,6 @@
 		537EE3D62033B2A3006EC967 = {
 			isa = PBXGroup;
 			children = (
-				5335D0E320461C5200531187 /* ItemCell.swift */,
 				537EE4122033B61A006EC967 /* Item.swift */,
 				537EE4142033B776006EC967 /* ItemStore.swift */,
 				537EE3E12033B2A3006EC967 /* Homepwner */,
@@ -107,11 +108,13 @@
 			isa = PBXGroup;
 			children = (
 				537EE3E22033B2A3006EC967 /* AppDelegate.swift */,
+				5335D0E320461C5200531187 /* ItemCell.swift */,
 				537EE3E62033B2A3006EC967 /* Main.storyboard */,
 				537EE3E92033B2A3006EC967 /* Assets.xcassets */,
 				537EE3EB2033B2A3006EC967 /* LaunchScreen.storyboard */,
 				537EE3EE2033B2A3006EC967 /* Info.plist */,
 				537EE4102033B33A006EC967 /* ItemsViewController.swift */,
+				5335D0E520462EF500531187 /* DetailViewController.swift */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				537EE4112033B33A006EC967 /* ItemsViewController.swift in Sources */,
 				537EE4132033B61A006EC967 /* Item.swift in Sources */,
 				537EE4152033B776006EC967 /* ItemStore.swift in Sources */,
+				5335D0E620462EF500531187 /* DetailViewController.swift in Sources */,
 				537EE3E32033B2A3006EC967 /* AppDelegate.swift in Sources */,
 				5335D0E420461C5200531187 /* ItemCell.swift in Sources */,
 			);
