@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cdT-Xj-vyY" id="yQN-lb-MPw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OX2-nA-4Uc">
@@ -172,14 +172,34 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zu1-e1-iRp">
-                                        <rect key="frame" x="0.0" y="114" width="343" height="473"/>
+                                        <rect key="frame" x="0.0" y="114" width="343" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="cIf-9Q-Hxo">
+                                        <rect key="frame" x="0.0" y="142.5" width="343" height="392.5"/>
+                                    </imageView>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="int-dF-lkf">
+                                        <rect key="frame" x="0.0" y="543" width="343" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="4pi-Kp-BVd"/>
+                                        </constraints>
+                                        <items>
+                                            <barButtonItem systemItem="camera" id="4Vl-oc-oLi">
+                                                <connections>
+                                                    <action selector="takePicture:" destination="zjJ-Ya-Wad" id="Ths-63-9hK"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="int-dF-lkf" secondAttribute="trailing" id="0sy-s7-Oex"/>
+                                    <constraint firstItem="int-dF-lkf" firstAttribute="leading" secondItem="jhh-Bh-qtB" secondAttribute="leading" id="7vO-0R-CmZ"/>
+                                    <constraint firstItem="int-dF-lkf" firstAttribute="top" secondItem="cIf-9Q-Hxo" secondAttribute="bottom" constant="8" id="Oaw-BY-Dkz"/>
                                     <constraint firstItem="GcJ-35-8Un" firstAttribute="leading" secondItem="c2x-gj-raD" secondAttribute="leading" id="U1E-Gb-jCg"/>
+                                    <constraint firstAttribute="bottom" secondItem="int-dF-lkf" secondAttribute="bottom" id="iZZ-kQ-XZ5"/>
                                     <constraint firstItem="iX0-vN-uEM" firstAttribute="leading" secondItem="GcJ-35-8Un" secondAttribute="leading" id="oIB-DO-fiq"/>
                                 </constraints>
                             </stackView>
@@ -199,6 +219,7 @@
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="zu1-e1-iRp" id="6Ue-Fg-PZ0"/>
+                        <outlet property="imageView" destination="cIf-9Q-Hxo" id="gy9-ku-cNX"/>
                         <outlet property="nameField" destination="Hxq-UC-GlF" id="s54-Lm-R9W"/>
                         <outlet property="serialNumberField" destination="LB1-iy-Itv" id="gN5-hl-DPE"/>
                         <outlet property="valueField" destination="VsX-1h-fzj" id="HFQ-bZ-lYY"/>
